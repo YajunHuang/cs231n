@@ -2,8 +2,7 @@ In this assignment you will practice writing backpropagation code, and training
 Neural Networks and Convolutional Neural Networks. The goals of this assignment
 are as follows:
 
-- understand **Neural Networks** and how they are arranged in layered
-  architectures
+- understand **Neural Networks** and how they are arranged in layered architectures
 - understand and be able to implement (vectorized) **backpropagation**
 - implement various **update rules** used to optimize Neural Networks
 - implement **batch normalization** for training deep networks

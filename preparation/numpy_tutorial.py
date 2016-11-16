@@ -170,10 +170,48 @@ def exercise_8():
 
 def exercise_9():
     """
-    Broadcasting
+    Broadcasting.
     :return:
     """
-    pass
+    x = np.array([[1,2,3], [4,5,6], [7,8,9], [10, 11, 12]])
+    v = np.array([1, 0, 1])
+    y = np.empty_like(x)
+
+    for i in range(4):
+        y[i, :] = x[i, :] + v
+    print y
+
+    vv = np.tile(v, (4, 1))
+    y = x + vv
+    print y
+
+    y = x + v
+    print y
+
+
+def exercise_10():
+    """
+    Broadcasting. Functions that support broadcasting are known as universal functions.
+    You can find the list of all universal functions in the documentation.
+    http://docs.scipy.org/doc/numpy/reference/ufuncs.html#available-ufuncs
+    :return:
+    """
+    # Compute outer product of vectors
+    v = np.array([1,2,3])  # v has shape (3,)
+    w = np.array([4,5])    # w has shape (2,)
+    print np.reshape(v, (3, 1)) * w
+
+    # Add a vector to each row of a matrix
+    x = np.array([[1,2,3], [4,5,6]])
+    print x + v
+
+    # Add a vector to each column of a matrix
+    print (x.T + w).T
+    print x + np.reshape(w, (2, 1))
+
+    # Multiply a matrix by a constant:
+    print x * 2
+
 
 if __name__ == '__main__':
-    exercise_8()
+    exercise_9()

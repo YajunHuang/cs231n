@@ -3,6 +3,7 @@ from linear_svm import *
 from softmax import *
 import random
 
+
 class LinearClassifier(object):
     def __init__(self):
         self.W = None
